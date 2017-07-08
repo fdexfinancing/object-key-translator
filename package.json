@@ -1,0 +1,16 @@
+{
+  "name": "object-key-translator",
+  "version": "1.0.0",
+  "description": "Object key recursive translator",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "<f(x)>ti@fdex.com.br",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "^3.4.2"
+  }
+}
