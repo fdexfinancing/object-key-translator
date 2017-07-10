@@ -1,5 +1,6 @@
 const translate = require('../index');
 const assert = require('assert');
+const util = require('util');
 
 const dict = {
   valid_value: 'Valor válido',
@@ -129,6 +130,30 @@ describe('object translate tests', () => {
     let translation = translate(target, dict);
 
     assert.deepEqual(expected_result, translation);
+  });
+
+  it('should translate a object with invalid dict', () => {
+    let target = [
+      [
+        'Test 234',
+        'Test 123',
+        [
+          'Test 456',
+          'Test 345'
+        ],
+        [
+          {
+            valid_items: {
+              valid_value: 'Yes'
+            }
+          }
+        ]
+      ]
+    ];
+
+    let translation = translate(target, {});
+
+    assert.deepEqual(target, translation);
   });
 
 });

@@ -9,7 +9,12 @@ function translate(collection, dict) {
 
     Object.keys(collection).forEach(key => {
       let t = translate(collection[key], dict);
-      new_obj[dict[key]] = t;
+
+      if (!dict[key]) {
+        new_obj[key] = t;
+      } else {
+        new_obj[dict[key]] = t;
+      }
     });
 
     return new_obj;
