@@ -29,7 +29,7 @@ let object = {
   key: 'Hello world'
 };
 
-let translation_result = translation(object, translation_dict);
+let translation_result = translator(object, translation_dict);
 
 
 ```
