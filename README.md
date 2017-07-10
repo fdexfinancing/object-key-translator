@@ -43,5 +43,5 @@ Return must be
 # Run tests
 
 ```bash
-$npm t
+$ npm t
 ```
